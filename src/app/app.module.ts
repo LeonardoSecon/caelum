@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FotoModule } from "./foto/foto.module";
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FotoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
