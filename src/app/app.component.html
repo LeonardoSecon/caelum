@@ -6,17 +6,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col m6"> 
+        
         <!--  <img src='./assets/img/img1.jpg' class="responsive-img" alt=""/>-->
        <!-- <foto url="./assets/img/img1.jpg" titulo="anything"></foto>-->
        <!-- <foto url="./assets/img/rick.jpg" titulo="rick "></foto> <!-- Internet died, use another foto-->
       
       <!-- {{listaFotos}}-->
-      <card *ngFor="let foto of listaFotos" titulo = "{{foto.titulo}}">
+      <card class="col m2" *ngFor="let foto of listaFotos" titulo = "{{foto.titulo}}">
        <foto  url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
       </card>
       </div>
-    </div>
+   
 </div>
 </main>
 
