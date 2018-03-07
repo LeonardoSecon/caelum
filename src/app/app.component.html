@@ -12,7 +12,9 @@
        <!-- <foto url="./assets/img/rick.jpg" titulo="rick "></foto> <!-- Internet died, use another foto-->
       
       <!-- {{listaFotos}}-->
-       <foto *ngFor="let foto of listaFotos" url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+      <card *ngFor="let foto of listaFotos" titulo = "{{foto.titulo}}">
+       <foto  url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+      </card>
       </div>
     </div>
 </div>
