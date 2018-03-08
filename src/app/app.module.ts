@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { FotoModule } from "./foto/foto.module";
 import { CardModule } from "./card/card.module";
 import { ListagemComponent } from './listagem/listagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { roteamento} from "./app.routes";
+import { roteamento } from "./app.routes";
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { roteamento} from "./app.routes";
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     FotoModule,
     CardModule,
     roteamento

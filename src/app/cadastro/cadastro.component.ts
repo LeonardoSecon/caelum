@@ -15,20 +15,17 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
-  salvar(evento: Event) {
-    evento.preventDefault()
+  salvar() {
+    
     console.log("salvou");
     console.log(this.foto);
     var url = "http://localhost:3000/v1/fotos";
-
-    let cabecalho = new HttpHeaders()
-    cabecalho.append('Content-Type', 'application/json')
 
     this.conexaoAPi.post(
       url,
       this.foto,
       {
-        headers: cabecalho
+        headers:  new HttpHeaders({'Content-Type': 'application/json'})
       }
 
     ).subscribe(

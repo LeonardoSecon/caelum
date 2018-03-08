@@ -9,19 +9,19 @@
     <div>{{foto.descricao}}</div>
 
     <div class="col m7">
-      <form class="col m7" (submit)="salvar($event)">
+      <form class="col m7" (ngSubmit)="salvar()">
         <div class="input-field col s12">
-          <input id="titulo" (input)="foto.titulo = $event.target.value" [value]="foto.titulo" type="text" class="validate">
+          <input [(ngModel)]='foto.titulo' name ='titulo' id= 'titulo' type="text" class="validate">
           <label for="titulo" class="active">Titulo</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="url" (input)="foto.url = $event.target.value" type="text" class="validate" [value]="foto.url">
+        <input id="url" [(ngModel)]='foto.url' type="text" class="validate" name ='url'>
           <label for="url" class="active">Url</label>
         </div>
 
         <div class="input-field col s12">
-          <textarea id="descricao" class="validate" class="materialize-textarea" (input)="foto.descricao = $event.target.value"></textarea>
+          <textarea id="descricao" class="validate" class="materialize-textarea" [(ngModel)]='foto.descricao'></textarea>
           <label for="descricao" class="active">Descriçao</label>
         </div>
         <div class="col m12">
