@@ -8,6 +8,7 @@ template:`<img src="{{url}}" class="responsive-img" alt="{{titulo}}" />`
 export class FotoComponent{
     @Input ()url=""
     @Input()titulo=""
+    descricao = ""
     constructor(){
         
     }

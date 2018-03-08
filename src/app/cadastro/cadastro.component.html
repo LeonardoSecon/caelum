@@ -3,11 +3,37 @@
 </header>
 
 <main class="container">
-
   <div class="row ">
-    <div class="col m12">
-      <a routerLink="" class="btn">Voltar</a>
+    <div>{{foto.titulo}}</div>
+    <div>{{foto.url}}</div>
+    <div>{{foto.descricao}}</div>
+
+    <div class="col m7">
+      <form class="col m7" (submit)="salvar($event)">
+        <div class="input-field col s12">
+          <input id="titulo" (input)="foto.titulo = $event.target.value" [value]="foto.titulo" type="text" class="validate">
+          <label for="titulo" class="active">Titulo</label>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="url" (input)="foto.url = $event.target.value" type="text" class="validate" [value]="foto.url">
+          <label for="url" class="active">Url</label>
+        </div>
+
+        <div class="input-field col s12">
+          <textarea id="descricao" class="validate" class="materialize-textarea" (input)="foto.descricao = $event.target.value"></textarea>
+          <label for="descricao" class="active">Descriçao</label>
+        </div>
+        <div class="col m12">
+          <button  class="btn">Salvar</button>
+          <a routerLink="" class="btn grey darken-1">Voltar</a>
+        </div>
+
+      </form>
     </div>
+
+
+
   </div>
 
 </main>
